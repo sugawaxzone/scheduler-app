@@ -8,7 +8,7 @@ document.getElementById("fetchBtn").addEventListener("click", async () => {
 
   try {
     const res = await fetch(
-      `https://nodejs-production-5a47f.up.railway.app/getSchedules?start_date=${start_date}&end_date=${end_date}&employee_id=${employeeId}`
+      `https://scheduler-backend.onrender.com/getSchedules?start_date=${start_date}&end_date=${end_date}&employee_id=${employeeId}`
     );
     const data = await res.json();
     document.getElementById("output").textContent = JSON.stringify(data, null, 2);
@@ -16,3 +16,4 @@ document.getElementById("fetchBtn").addEventListener("click", async () => {
     document.getElementById("output").textContent = "Error: " + err;
   }
 });
+
